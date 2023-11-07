@@ -18,7 +18,7 @@ class Job_craw():
         options = ChromeOptions()
         options.add_experimental_option("detach", True)
         options.add_argument("--disable-extensions")
-        # options.add_argument("--headless")
+        options.add_argument("--headless")
         options.add_argument("--incognito")
         options.add_argument("--window-size=1920x1080")
 
@@ -31,9 +31,9 @@ class Job_craw():
         
         print("Starting")
 
-        self.browser.get("https://www.indeed.com/jobs?q={}&l={}".format(self.job_title, self.job_location))
+        self.browser.get("https://jobs.vn.indeed.com/jobs?q={}&l={}".format(self.job_title, self.job_location))
 
-        wait = WebDriverWait(self.browser, 10)  
+        wait = WebDriverWait(self.browser, 100)  
 
         while True:
         
@@ -45,8 +45,13 @@ class Job_craw():
                 cards[i].click()
                 title = wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, 'jobsearch-JobInfoHeader-title-container')))[0].text
                 print(title)
-                company = self.browser.find_element(By.CLASS_NAME, 'css-1cjkto6') 
-                company_link = company.find_element(By.TAG_NAME, 'a').get_attribute('href')
+                try:
+                    company = self.browser.find_element(By.CLASS_NAME, 'css-1cjkto6').text 
+                except: company=None
+                try:
+                    company_link = company.find_element(By.TAG_NAME, 'a').get_attribute('href')
+                except: company_link = None
+
                 try:
                     location = self.browser.find_element(By.CLASS_NAME, 'css-ks9svk').text
                 except:
@@ -66,7 +71,7 @@ class Job_craw():
                 
                 sleep(random.randint(1,3))
 
-                data = [title, date[i], company, company_link, location, type, description]
+                data = [title, date[i].text, company, company_link, location, type, description]
                 new_row = pd.DataFrame([data], columns=self.df.columns)
                 self.df = pd.concat([self.df, new_row], ignore_index=True)
 
@@ -80,14 +85,13 @@ class Job_craw():
         print("Save results")
 
         
-        self.df.to_cvs("job.csv")
+        self.df.to_csv("job.csv")
 
         return
     
 if __name__ == "__main__":
     job_title = "data"
-    job_location = "Vietnam"
-    job_crawler = Job_craw(job_title, job_location)  # Tạo một đối tượng Job_craw với job_title và job_location
-    job_crawler.Start_craw()  # Gọi phương thức Start_craw trên đối tượng job_crawler
-
+    job_location = "Việt Nam"
+    job_crawler = Job_craw(job_title, job_location) 
+    job_crawler.Start_craw()
 
