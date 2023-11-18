@@ -90,8 +90,8 @@ class Job_craw():
         return
     
 if __name__ == "__main__":
-    job_title = "data"
-    job_location = "Việt Nam"
+    job_title = "Job"
+    job_location = "Location"
     job_crawler = Job_craw(job_title, job_location) 
     job_crawler.Start_craw()
 
