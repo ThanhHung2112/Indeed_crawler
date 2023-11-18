@@ -17,7 +17,7 @@ cd Indeed_crawler
 ```
 pip install -r requirements.txt
 ```
-4. Change Job and Location in this script, then run the code
+4. Change ```Job``` and ```Location``` in this script, then run the code
 ```
 if __name__ == "__main__":
     job_title = "Job"
