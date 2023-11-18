@@ -2,8 +2,7 @@
 
 This repository contains a Python script designed for web scraping job data from Indeed. The code allows users to specify their search criteria by providing the desired Job title and Location.
 
-## Installation
-To run this responsitory, follow these step.
+## How to Use
 
 1. Clone this repository to your computer
 ```
