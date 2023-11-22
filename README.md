@@ -13,6 +13,18 @@ ChromeDriver: 119.0.6045.105
 
 **Note:** It is essential to use a Chrome Driver version that matches your Google Chrome browser. To check your browser version, navigate to `chrome://version` in your browser. Ensure compatibility by downloading the appropriate Chrome Driver version [here](https://chromedriver.chromium.org/downloads).
 
+## What Information Can You Retrieve?
+
+The script retrieves the following information for each job posting:
+
+- **Title:** The job title.
+- **Date:** The date when the job was posted.
+- **Company:** The name of the hiring company.
+- **Company Link:** The link to the hiring company's page on Indeed (if available).
+- **Location:** The job location.
+- **Type/Salary:** Additional information such as job type or salary details.
+- **Description:** A detailed description of the job.
+
 ## How to Use
 
 1. **Clone the Repository to Your Computer**
