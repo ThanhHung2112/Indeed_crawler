@@ -99,7 +99,7 @@ class Job_craw():
         print("Save results")
 
         
-        self.df.to_csv("job.csv")
+        self.df.to_csv("job_{}_{}.csv".format(self.job_title, self.job_location))
 
         return
     
