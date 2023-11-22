@@ -40,7 +40,7 @@ ChromeDriver: 119.0.6045.105
         job_crawler = Job_craw(job_title, job_location) 
         job_crawler.Start_craw()
     ```
-    Replace "Your Job Title" and "Your Location" with the specific job title and location you are interested in then Execute the Python script `job_craw.py` to start the job data crawling process.
+    Replace "Your Job Title" and "Your Location" with the specific job title and location you are interested in then execute the Python script `job_craw.py` to start the job data crawling process.
 
    
    
