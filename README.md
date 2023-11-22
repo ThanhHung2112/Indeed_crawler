@@ -2,6 +2,17 @@
 
 This repository contains a Python script designed for web scraping job data from Indeed. The code allows users to specify their search criteria by providing the desired Job title and Location.
 
+## System Requirements
+    
+```python
+Google Chrome: 119.0.6045.160 (64 bit) (cohort: Stable)
+ChromeDriver: 119.0.6045.105 
+```
+
+👉 Find Chrome driver 119 [here](https://googlechromelabs.github.io/chrome-for-testing/).
+
+**Note:** It is essential to use a Chrome Driver version that matches your Google Chrome browser. To check your browser version, navigate to `chrome://version` in your browser. Ensure compatibility by downloading the appropriate Chrome Driver version [here](https://chromedriver.chromium.org/downloads).
+
 ## How to Use
 
 1. Clone this repository to your computer
@@ -16,7 +27,7 @@ cd Indeed_crawler
 ```
 pip install -r requirements.txt
 ```
-4. Change ```Job``` and ```Location``` in this script, then run the code
+4. Change `Job` and `Location` in this script, then run the code
 ```
 if __name__ == "__main__":
     job_title = "Job"
