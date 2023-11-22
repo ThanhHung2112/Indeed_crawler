@@ -24,6 +24,8 @@ The script retrieves the following information for each job posting:
 - **Location:** The job location.
 - **Type/Salary:** Additional information such as job type or salary details.
 - **Description:** A detailed description of the job.
+  
+![Alt Text](https://github.com/ThanhHung2112/Indeed_crawler/raw/main/assets/Craw.png)
 
 ## How to Use
 
