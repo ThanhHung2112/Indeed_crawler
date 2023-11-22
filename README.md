@@ -15,24 +15,32 @@ ChromeDriver: 119.0.6045.105
 
 ## How to Use
 
-1. Clone this repository to your computer
-```
-git clone https://github.com/ThanhHung2112/Indeed_crawler
-```
-2. Move to the Folder
-```
-cd Indeed_crawler
-```
-3. Install denpendencie
-```
-pip install -r requirements.txt
-```
-4. Change `Job` and `Location` in this script, then run the code
-```
-if __name__ == "__main__":
-    job_title = "Job"
-    job_location = "Location"
-    job_crawler = Job_craw(job_title, job_location) 
-    job_crawler.Start_craw()
-```
- Replace "Job" and "Location" with the desired job title and location in the script before running the code.
+1. **Clone the Repository to Your Computer**
+    ```bash
+    git clone https://github.com/ThanhHung2112/Indeed_crawler
+    ```
+
+2. **Navigate to the Repository Folder**
+    ```bash
+    cd Indeed_crawler
+    ```
+
+3. **Install Dependencies**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. **Modify Job Search Criteria**
+   
+   Open the Python script `job_craw.py` and replace the placeholders with your desired job title and location.
+    ```python
+    if __name__ == "__main__":
+        job_title = "Your Job Title"
+        job_location = "Your Location"
+        job_crawler = Job_craw(job_title, job_location) 
+        job_crawler.Start_craw()
+    ```
+    Replace "Your Job Title" and "Your Location" with the specific job title and location you are interested in then Execute the Python script `job_craw.py` to start the job data crawling process.
+
+   
+   
