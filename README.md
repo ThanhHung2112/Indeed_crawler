@@ -1,7 +1,8 @@
 # Indeed_crawler
 
 This repository contains a Python script designed for web scraping job data from Indeed. The code allows users to specify their search criteria by providing the desired Job title and Location.
-You can find my datasets on [Kaggle](https://kaggle.com/datasets/leewanhung/indeed-job).
+
+👉 You can find my datasets on [Kaggle](https://kaggle.com/datasets/leewanhung/indeed-job).
 
 ## System Requirements
     
